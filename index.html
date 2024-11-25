@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Company sample project 1</title>
+    <style>
+        
+        .navbar {
+            width: 100%;
+            
+        }
+
+        .navbar-top {
+            background-color:orange;
+            color: white;
+            text-align: left;
+            padding: 10px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .navbar-bottom {
+            background-color: orangered;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+        }
+
+        .navbar-left h5 {
+            margin-bottom: 5px;
+        }
+
+        .navbar-right {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .navbar-right input {
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .navbar-right img {
+            width: 30px;
+            height: 30px;
+            border: 2px solid white;
+            border-radius: 50%;
+            padding: 5px;
+            cursor: pointer;
+            background-color: #007bff;
+            transition: transform 0.2s;
+            background-color: white;
+        }
+
+        .navbar-right img:hover {
+            transform: scale(1.1);
+        }
+         
+  .container-wrapper {
+    display: flex;
+    justify-content: space-between; 
+    gap: 20px; 
+    padding: 40px;
+   }
+    .container-left {
+            flex: 1;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        .container-left h1 {
+            font-size: 2rem;
+            color:black;
+            margin-bottom: 15px;
+        }
+
+        .container-left p {
+            font-size: 1rem;
+            color:black;
+            margin: 5px 0;
+        }
+
+        .container-left h4 {
+            font-size: 1.5rem;
+            color:orangered; 
+            margin-top: 15px;
+        }
+
+        .container-left .highlight {
+            color: black; 
+            font-weight: bold;
+        }
+
+       
+        .container-right {
+            flex: 1;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            height: 100%;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        
+        @media (max-width: 768px) {
+            .container-wrapper {
+                flex-direction: column; 
+                gap: 10px;
+                padding: 10px;
+            }
+
+            .container-left {
+                padding: 20px;
+            }
+
+            .container-left h1 {
+                font-size: 1.5rem;
+            }
+
+            .container-left p {
+                font-size: 0.9rem;
+            }
+
+            .container-left h4 {
+                font-size: 1.2rem;
+            }
+        }
+
+
+        
+        .container-left {
+            flex: 1;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 50px;
+            height: 670px;
+            position: relative; 
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        
+        .container-right {
+            flex: 1;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 50px;
+            height: 600px;
+            text-align: center;
+        }
+
+        
+        .oval-image {
+            position: absolute; 
+            left: 20px; 
+            top: 20px; 
+            width: 60%; 
+            height: 240px; 
+            max-width: 180px; 
+            border-radius: 50%; 
+            object-fit: cover; 
+            display: block;
+            margin: 0 auto;
+        }
+
+        
+        .mini-container {
+            background-color:orange;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            flex: 1;
+            margin: 5px;
+            text-align: center;
+        }
+
+        
+        .mini-containers-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        
+        @media (max-width: 768px) {
+            .container-wrapper {
+                flex-direction: column; 
+                gap: 10px;
+            }
+
+            .oval-image {
+                width: 50%; 
+                max-width: 120px; 
+                left: 50%; 
+                transform: translateX(-50%);
+            }
+
+            .mini-containers-wrapper {
+                flex-direction: column;
+            }
+        }
+        
+        .square-button  {
+            background-color:orangered;
+            color: black;
+            border: 3px solid black;
+            padding: 5px;
+            width: 30%; 
+            height:50px;
+            border-radius:2 px;
+            font-size: 1rem;
+            cursor: pointer;
+            text-align: center;
+            margin-top: 40px;
+            transition: background-color 0.3s ease;
+            box-shadow: black;
+        }
+
+        .square-button:hover {
+            background-color:orange;
+        }
+        .button  {
+            background-color:orangered;
+            color: black;
+            border: 3px solid black;
+            padding: 5px;
+            width: 40%; 
+            height:50px;
+            border-radius:2 px;
+            font-size: 1rem;
+            cursor: pointer;
+            text-align: center;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+            border-color: black;
+        }
+
+        .button:hover {
+            background-color:orange;
+        }
+        
+        .card {
+            background-color: #f8f8f8;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            flex: 1;
+            margin: 5px;
+            text-align: center;
+            
+        }
+
+        .cards-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+        }
+
+        .card h4 {
+            font-size: 1.5rem;
+            color: orangered;
+        }
+
+        .card p {
+            font-size: 1rem;
+            color: black;
+        }
+
+        
+        @media (max-width: 768px) {
+            .container-wrapper {
+                flex-direction: column;
+                gap: 10px;
+                padding: 10px;
+            }
+        }
+    
+        .container-right {
+            flex: 1;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            height: auto;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+       
+        
+        .card {
+            background-color: #f8f8f8;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            flex: 1;
+            margin: 5px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+           
+        }
+
+        
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover; 
+            border-radius: 8px;
+            margin-bottom: 15px; 
+        }
+
+        
+        .card h4 {
+            font-size: 1.5rem;
+            color: orangered;
+            margin-bottom: 10px;
+        }
+
+       
+        .card p {
+            font-size: 1rem;
+            color: black;
+        }
+
+        
+        .cards-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+        }
+
+       
+        @media (max-width: 768px) {
+            .cards-wrapper {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .card {
+                width: 90%; 
+            }
+        }
+        .name {
+            text-align: left;
+        }
+        
+  .modern-button {
+    background-color: orangered;
+    color: black;
+    border: 3px solid black;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    font-weight: 5px;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: auto; 
+    margin-top: 20px; 
+    margin-right:70%;
+  }
+
+
+  .modern-button:hover {
+    background-color: orange;
+    transform: scale(1.05);  
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+
+
+  .modern-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 165, 0, 0.5); 
+  }
+
+
+   @media (max-width: 768px) {
+    .modern-button {
+        width: 100%;  
+        padding: 14px 28px;
+        font-size: 1.1rem;  
+    }
+  }
+        
+        
+     </style>
+      </head>
+     <body>
+
+    <main>
+        <!-- Navbar -->
+        <div class="navbar">
+            <div class="navbar-top">
+                My Will
+            </div>
+            <div class="navbar-bottom">
+                <div class="navbar-left">
+                    <h3><b>Good morning, Vinoth!</b></h3>
+                    <p>Today is 20 November 2024</p>
+                </div>
+                <div class="navbar-right">
+                    <input type="text" placeholder="Search....">
+                    <img src="images/notification bell.png" alt="Notification">
+                    <img src="images/settings img.png" alt="Settings">
+                    <img src="images/login.png" alt="Download">
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="container-wrapper">
+            <div class="container-left">
+                <h1>Ethen Will</h1>
+                <p>Date of creation: 04/12/1988</p>
+                <p>Status: Complete</p>
+                <h4><span class="highlight">$2.5 Lakhs</span></h4>
+                <p>Worth assets today</p>
+                <br>
+            
+                
+                <div class="mini-containers-wrapper">
+                    
+                    <div class="mini-container">
+                        <h4>10</h4>
+                        <p>Active assets</p>
+                    </div>
+                    
+                    <div class="mini-container">
+                        <h4>3</h4>
+                        <p>Active Liabilities</p>
+                    </div>
+                    
+                    <div class="mini-container">
+                        <h4>15</h4>
+                        <p>Active Beneficiaries</p>
+                    </div>
+                    
+                    <div class="mini-container">
+                        <h4>3</h4>
+                        <p> Active Singnatories</p>
+                    </div>
+                </div>
+                <br>
+                <button class="square-button">Add new asset</button>
+            
+                <button class="button">Update asset value</button>
+                
+                <img src="men image 1.jpg" alt="Oval Image" class="oval-image">
+                
+            </div>
+            <div class="container-right">
+                <h1 class="name">Signatory</h1>
+   
+               <div class="cards-wrapper">
+                   <div class="card">
+                       <img src="images/men 2 image.jpg" alt="Card 1 Image">
+                   <h4>Liam</h4>
+                   <p>Witness</p>
+                   <p> Date:28.04.2013</p>
+                   <p>Status:Complete</p>
+                    </div>
+                   <div class="card">
+                       <img src="images/men 2 image.jpg" alt="Card 1 Image" >
+                       <h4>Liam</h4>
+                   <p>Witness</p>
+                   <p> Date:28.04.2013</p>
+                   <p>Status:Complete</p>
+                </div>
+                   <div class="card">
+                       <img src="images/men 2 image.jpg" alt="Card 1 Image">
+                       <h4>Liam</h4>
+                   <p>Witness</p>
+                   <p> Date:28.04.2013</p>
+                   <p>Status:Complete</p>
+                    </div>
+                   
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <button class="modern-button">View Invitation</button>
+                  </div>
+               
+               </div>
+           </main>
+
+          </body>
+        </html>
